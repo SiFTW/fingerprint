@@ -10,7 +10,7 @@ WORKDIR /home/genie/app
 RUN chown -R genie:genie /home/
 
 USER genie
-RUN julia -e "using Pkg; Pkg.add([\"GenieFramework\",\"CSV\",\"Colors\",\"DataFrames\",\"Interpolations\",\"KernelDensity\",\"PlotlyBase\"]); Pkg.activate(\".\"); Pkg.instantiate(); Pkg.precompile();"
+RUN julia -e "using Pkg; Pkg.add([\"GenieFramework\",\"GenieCache\",\"StippleDownloads\",\"CSV\",\"Colors\",\"BSON\",\"DataFrames\",\"Interpolations\",\"KernelDensity\",\"PlotlyBase\"]); Pkg.activate(\".\"); Pkg.instantiate(); Pkg.precompile();"
 
 EXPOSE 8000
 EXPOSE 80
